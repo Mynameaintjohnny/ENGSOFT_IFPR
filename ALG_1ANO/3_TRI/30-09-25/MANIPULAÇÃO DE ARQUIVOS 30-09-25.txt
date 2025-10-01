@@ -1,0 +1,8 @@
+MANIPULAÇÃO DE ARQUIVOS 30-09-25
+
+'r' = read (modo de leitura)
+'w' = write (escreve o arquivo em branco pra escrever)
+'a' = append (abre o arquivo pra adicionar a escrita)
+
+'o' = open (abre o arquivo)
+

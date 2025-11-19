@@ -1,0 +1,179 @@
+ALG_18-11-25
+
+O QUE É UM DADO
+
+TIPOS DE DADOS
+
+ESTRUTURA DE DADOS
+
+REPRESENTA NA MEMORIA DO COMPUTADOR COMO ELE OCUPARÁ A MEMÓRIA.
+
+TIPO DE ESTRUTURAS DE DADOS
+
+VETOR
+- TAMANHO ESPECIFICO
+- TIPO DE DADO HOMOGÊNEO
+- UNIDIMENSIONAL
+
+MATRIZ
+- TAMANHO ESPECÍFICO
+- TIPO DE DADO HOMOGÊNEO
+- BIDIMENSIONAL	
+
+"MATRIZ É UM VETOR DE VETORES"
+
+linha =3
+coluna= 4
+matriz = [0] * linha
+for i in range(0, linha):
+    matriz[i] = [0] * coluna
+
+
+CLASSES
+- TAMANHO FIXO
+- CONTEM ATRIBUTOS (VARIAVEIS)
+- TIPO DE DADO HETEROGÊNEO
+
+
+CLASSE: DISPLINA
+ATRIBUTOS:
+- ID: INT
+- NOME: STRING
+- CH: INT
+- PROFESSOR: STRING
+
+
+class Disciplina:
+    def __init__(self):
+        self.id = 0
+        self.nome = ""
+        self.ch = 0
+        self.professor = ""
+        
+CLASSE É TUDO QUE PODE SER REUTILIZADO (REUSO)
+
+
+
+
+LISTAS
+- TAMANHO VARIÁVEL
+- TIPO DE DADO HETEROGÊNEO
+
+
+lista = []
+print(lista)
+
+lista.append(5) #insere no fim
+
+lista.insert(1,"oi") # insire na indice, cria um valor novo e empura o resto pra frente
+
+lista.pop(2) #exclui o valor do índice, retorna o valor de dentro
+
+lista.remove(80.2) #remove a primeira ocorrencia do valor especificado
+
+
+
+
+TUPLA
+minha_tupla = (1,2,3)
+
+- TIPO DE DADO HETEROGÊNEO
+- VALORES SÃO IMUTÁVEIS DEPOIS DA CRIAÇÃO DA TUPLA
+- PRECISA CRIAR OS VALORES PRA CRIAR A TUPLA
+
+
+
+CONJUNTOS( SET() )
+- NÃO PODE ACESSAR INDICES
+PODE SER:
+conjunto = set()
+ou
+conjunto = {1,2,3,4,5,6}
+ou
+conjunto = {[1,2,3,4,5,6,7]}
+
+
+lista -> []
+
+tupla -> ()
+
+conjunto-> {valores}
+
+dicionário -> {}
+
+
+
+
+conjunto = set()
+conjunto.add(1)
+conjunto.add(5)
+conjunto.add(7)
+conjunto.add(2)
+
+- Vai sair os valores em qualquer lugar pois a posição dos valores de um conjunto não altera nada. Dessa forma *não é possível acessar índices pois não há ordem*
+- Não há números repetidos dentro de um conjunto (n dá pra adicionar 1 no conjunto denovo)
+
+a = set()
+a.add(1)
+a.add(5)
+a.add(7)
+a.add(2)
+
+b = set()
+b.add(2)
+b.add(3)
+b.add(7)
+b.add(35.5)
+
+união = a.union(b)
+inter = a.intersection(b)
+difA = a - b
+
+X = {1,7}
+
+X C A
+
+x = {1,7}
+subc= x.issubset(a)
+print(subc)
+
+pert = 3 in b
+print(pert)
+
+
+
+''' CRIE DOIS CONJUNTOS:
+turma_a = {'Ana','Beto','Carlos','Duda'}
+turma_b = {'Carlos','Edu','Fernanda','Ana'}
+
+SEU PROGRAMA DEVE:
+MOSTRAR OS ALUNOS QUE ESTÃO NAS DUAS TURMAS (INTERSEÇÃO)
+MOSTRAR OS ALUNOS QUE ESTÃO SOMENTE NA TURMA A (DIFERENÇA)
+MOSTRAR A UNIAO DAS DUAS TURMAS (TODOS OS ALUNOS SEM REPETIÇÃO)'''
+
+turma_a = {['Ana','Beto','Carlos','Duda']}
+turma_b = {['Carlos','Edu','Fernanda','Ana']}
+
+interc = turma_a.intersection(turma_b)
+difeA = turma_a - turma_b
+union = turma_a.union(turma_b)
+
+print(f"Interceção: {interc}\nAlunos somente da classe A: {difeA}\nTodos os alunos das duas classes: {union}")
+
+
+#DICIONARIO (dict)
+-Valores podem ser variados
+- Armazenam valores em pares
+chave : valor
+chave: índice do vetor nomeado (pode ser numérico ou nome)
+valor: valor armazenado naquela chave
+- Parecido com lista mas consegue adicionar uma chave (análogo de atributo) com valor e incluir no dicionário enquanto lista não consegue adicionar atributos sem alterar a classe em específico.
+
+-Dicionário não tem métodos(funções da classe que manipulam atributos) como classes tem.
+
+
+
+p.nome # OBJETO ACESSANDO ATRIBUTO NOME
+p["nome"] DICIONARIO ACESSANDO CHAVE NOME
+
+
